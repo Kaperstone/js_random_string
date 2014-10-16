@@ -25,7 +25,7 @@
     Text length: <font id="l">0</font><br />
     <input type="submit" id="submit" value="generate random string" /><br />
     <br /><br />© 2014 <a href="http://www.kaperstone.ru">Kaperstone aka Kirill</a> - GitHub: <a href="https://github.com/Kaperstone/js_random_string">https://github.com/Kaperstone/js_random_string</a><br />
-    Live demo at <a href="http://kaperstone.com/tools/randstr.html">http://kaperstone.ru/tools/randstr.html</a>
+    Live demo at <a href="http://kaperstone.com/randstr.html">http://kaperstone.ru/randstr.html</a>
     <script>
       $("#submit").addEventListener("click",function() {
         var
