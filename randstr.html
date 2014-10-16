@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Random string generator</title>
+    <link type="text/javascript" src="kaperstone.ru/dom-selector.js" />
+    <style>input{padding:5px 2px;width:350px}textarea{width: 350px;height: 87px}</style>
+  </head>
+  <body>
+    The random strings are generated with JavaScript and aren't generated with PHP, therefore aren't depended on the server performance but on your own PC.<br />
+    You can generate as much as string as you wish and at any length you wish.<br />
+    Have fun.<br /><br />For Mr.Obvious, your JavaScript must be enabled in order for this to work.<br />
+    <input style="width:auto" type="checkbox" id="br" checked /><label>Break lines between strings ?</label><br />
+    <input style="width:auto" type="checkbox" id="space" /><label>Add spaces between strings ?</label><br />
+    String options<br /><input type="text" id="str" value="abcefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" /><br />
+    <input type="text" id="length" placeholder="How long does (each) string must be ?" /><br />
+    <input type="text" id="amount" placeholder="How many strings do you need ?" /><br />
+    <textarea id="text" placeholder="Generated string will output here"></textarea><br />
+    Text length: <font id="l">0</font><br />
+    <input type="submit" id="submit" value="generate random string" /><br />
+    <br /><br />© 2014 <a href="https://github.com/Kaperstone">Kaperstone aka Kirill</a> - GitHub: <a href="https://github.com/Kaperstone/js_random_string">https://github.com/Kaperstone/js_random_string</a><br />
+    Live demo at <a href="http://kaperstone.com/tools/randstr.html">http://kaperstone.ru/tools/randstr.php</a>
+    <script>
+      $("#submit").addEventListener("click",function() {
+        var
+            length=$("#length").value,
+            amount=$("#amount").value,
+            str=$("#str").value,
+            output="",rand;
+        for(var i=0;i<amount;i++) {
+          for(var x=0;x<length;x++) {
+            output+=str[Math.floor(Math.random() * str.length)];
+          }
+          if($("#space").checked){output+=" ";}
+          if($("#br").checked && i<(amount-1)){output+="\n";}
+
+        }
+        $("#text").value=output;
+        $("#l").innerHTML=output.length;
+
+      });
+    </script>
+  </body>
+</html>
