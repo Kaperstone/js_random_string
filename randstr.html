@@ -2,7 +2,14 @@
 <html>
   <head>
     <title>Random string generator</title>
-    <link type="text/javascript" src="kaperstone.ru/dom-selector.js" />
+    <!--
+
+      Thanks to Honza Pokorny for his great (micro) framework
+
+      https://github.com/honza/140medley
+
+    -->
+    <script src="/dom-selector.js"></script>
     <style>input{padding:5px 2px;width:350px}textarea{width: 350px;height: 87px}</style>
   </head>
   <body>
@@ -17,7 +24,7 @@
     <textarea id="text" placeholder="Generated string will output here"></textarea><br />
     Text length: <font id="l">0</font><br />
     <input type="submit" id="submit" value="generate random string" /><br />
-    <br /><br />© 2014 <a href="https://github.com/Kaperstone">Kaperstone aka Kirill</a> - GitHub: <a href="https://github.com/Kaperstone/js_random_string">https://github.com/Kaperstone/js_random_string</a><br />
+    <br /><br />© 2014 <a href="http://www.kaperstone.ru">Kaperstone aka Kirill</a> - GitHub: <a href="https://github.com/Kaperstone/js_random_string">https://github.com/Kaperstone/js_random_string</a><br />
     Live demo at <a href="http://kaperstone.com/tools/randstr.html">http://kaperstone.ru/tools/randstr.php</a>
     <script>
       $("#submit").addEventListener("click",function() {
