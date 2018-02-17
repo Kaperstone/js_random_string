@@ -9,7 +9,7 @@
       https://github.com/honza/140medley
 
     -->
-    <script src="/dom-selector.js"></script>
+    <script>function $(a,b){a=a.match(/^(\W)?(.*)/);return(b||document)["getElement"+(a[1]?a[1]=="#"?"ById":"sByClassName":"sByTagName")](a[2])};</script>
     <style>input{padding:5px 2px;width:350px}textarea{width: 350px;height: 87px}</style>
   </head>
   <body>
